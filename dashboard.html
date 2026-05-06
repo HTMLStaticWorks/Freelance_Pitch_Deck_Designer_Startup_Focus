@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeckDesigner- Founder Dashboard</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            background-color: var(--bg-light);
+        }
+
+        .sidebar {
+            width: 260px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: var(--bg-white);
+            border-right: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all var(--transition-fast);
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 20px;
+            transition: all var(--transition-fast);
+        }
+
+        .top-nav {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0;
+            /* Let container handle padding */
+            display: block;
+            /* Override default flex to allow vertical expansion */
+            height: auto !important;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: var(--radius-md);
+            margin: 2px 16px;
+            transition: all var(--transition-fast);
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+            background: var(--primary);
+            color: white !important;
+        }
+
+        .sidebar-link.active i {
+            color: white;
+        }
+
+        @media (max-width: 991px) {
+            .sidebar {
+                left: -260px;
+            }
+
+            .sidebar.show {
+                left: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+
+        .dashboard-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            margin-bottom: 10px;
+            transition: all 0.2s;
+        }
+
+        .file-item:hover {
+            border-color: var(--primary);
+            background: var(--bg-light);
+        }
+
+        .content-section {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-card {
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+        }
+
+        .project-row {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+
+        .project-row:last-child {
+            border-bottom: none;
+        }
+
+        .project-row:hover {
+            background: var(--bg-light);
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar d-flex flex-column" id="sidebar">
+        <div class="p-4 mb-2 d-flex align-items-center justify-content-between">
+            <a class="navbar-brand fs-4 fw-bold m-0" href="index.html">
+                <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+            </a>
+            <button class="btn btn-sm btn-light d-lg-none" id="closeSidebar"><i class="ph ph-x"></i></button>
+        </div>
+
+        <nav class="flex-grow-1" id="sidebarNav">
+            <div class="px-4 mb-2 text-secondary small fw-bold text-uppercase opacity-50">Menu</div>
+            <a class="sidebar-link active" data-target="content-dashboard">
+                <i class="ph-fill ph-squares-four fs-5"></i> Overview
+            </a>
+            <a class="sidebar-link" data-target="content-projects">
+                <i class="ph-fill ph-folder-open fs-5"></i> Projects
+            </a>
+            <a class="sidebar-link" data-target="content-messages">
+                <i class="ph-fill ph-chats-circle fs-5"></i> Messages
+            </a>
+            <a class="sidebar-link" data-target="content-analytics">
+                <i class="ph-fill ph-chart-bar fs-5"></i> Analytics
+            </a>
+
+            <div class="px-4 mt-4 mb-2 text-secondary small fw-bold text-uppercase opacity-50">Organization</div>
+            <a class="sidebar-link" data-target="content-team">
+                <i class="ph-fill ph-users fs-5"></i> Team
+            </a>
+            <a class="sidebar-link" data-target="content-settings">
+                <i class="ph-fill ph-gear fs-5"></i> Settings
+            </a>
+        </nav>
+
+        <div class="p-4 border-top">
+            <div class="d-flex align-items-center gap-3">
+                <img src="assets/images/david.png" alt="User" class="rounded-circle" width="36">
+                <div class="overflow-hidden">
+                    <h6 class="mb-0 fw-bold small text-truncate">David Chen</h6>
+                    <small class="text-secondary" style="font-size: 0.7rem;">Pro Plan</small>
+                </div>
+                <a href="index.html" class="btn btn-sm btn-light ms-auto text-danger"><i class="ph ph-sign-out"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Nav -->
+        <header class="navbar navbar-expand-lg top-nav rounded-3 mb-4 shadow-sm p-0 overflow-visible">
+            <div class="container-fluid p-3 d-flex flex-wrap flex-lg-nowrap align-items-center justify-content-between">
+                <!-- Left: Brand (Mobile Only) -->
+                <div class="d-flex align-items-center order-1 d-lg-none">
+                    <a class="navbar-brand fs-5 fw-bold m-0" href="index.html">
+                        <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+                    </a>
+                </div>
+
+                <!-- Right Side Utilities -->
+                <div class="d-flex align-items-center gap-2 order-2 order-lg-2 ms-lg-auto">
+                    <!-- Bell (Desktop Only) -->
+                    <button class="utility-btn position-relative d-none d-lg-flex">
+                        <i class="ph ph-bell fs-5"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </button>
+                    <button class="utility-btn" id="themeToggleDash">
+                        <i class="ph ph-moon fs-5"></i>
+                    </button>
+                    <button class="utility-btn" id="rtlToggleDash" aria-label="RTL Toggle">
+                        <i class="ph ph-arrows-left-right fs-5"></i>
+                    </button>
+                    <button class="navbar-toggler utility-btn border-0 d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#dashboardNav">
+                        <i class="ph ph-list fs-4"></i>
+                    </button>
+                </div>
+
+                <!-- Row 2 Break for Mobile -->
+                <div class="w-100 d-lg-none order-3"></div>
+
+                <!-- Row 2 Content: Admin Dashboard & Mobile Bell -->
+                <div class="d-flex align-items-center justify-content-between w-100 w-lg-auto mt-2 mt-lg-0 order-4 order-lg-1">
+                    <span class="text-secondary fw-bold">Admin Dashboard</span>
+                    <!-- Bell (Mobile Only) -->
+                    <button class="utility-btn position-relative d-lg-none">
+                        <i class="ph ph-bell fs-5"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <!-- Bootstrap Collapse -->
+            <div class="collapse navbar-collapse w-100 mt-3" id="dashboardNav">
+
+                <!-- Sidebar Menus as Nav Items for Mobile -->
+                <ul class="navbar-nav d-lg-none gap-1 pb-2">
+                    <!-- User Profile Info -->
+                    <li class="nav-item mb-3">
+                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                            <img src="assets/images/david.png" alt="User" class="rounded-circle" width="40">
+                            <div class="overflow-hidden">
+                                <h6 class="mb-0 fw-bold small text-truncate">David Chen</h6>
+                                <small class="text-secondary" style="font-size: 0.7rem;">Pro Plan</small>
+                            </div>
+                        </div>
+                    </li>
+                    <div class="px-3 mb-2 text-secondary small fw-bold text-uppercase opacity-50">Menu</div>
+                    <li class="nav-item">
+                        <a class="nav-link sidebar-link active" onclick="showSection('content-dashboard')">
+                            <i class="ph-fill ph-squares-four fs-5"></i> Overview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sidebar-link" onclick="showSection('content-projects')">
+                            <i class="ph-fill ph-folder-open fs-5"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sidebar-link" onclick="showSection('content-messages')">
+                            <i class="ph-fill ph-chats-circle fs-5"></i> Messages
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sidebar-link" onclick="showSection('content-analytics')">
+                            <i class="ph-fill ph-chart-bar fs-5"></i> Analytics
+                        </a>
+                    </li>
+
+                    <div class="px-3 mt-3 mb-2 text-secondary small fw-bold text-uppercase opacity-50">Organization
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link sidebar-link" onclick="showSection('content-team')">
+                            <i class="ph-fill ph-users fs-5"></i> Team
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sidebar-link" onclick="showSection('content-settings')">
+                            <i class="ph-fill ph-gear fs-5"></i> Settings
+                        </a>
+                    </li>
+
+                    <li class="nav-item mt-2 border-top pt-2">
+                        <a href="index.html" class="nav-link text-danger">
+                            <i class="ph ph-sign-out fs-5"></i> Log Out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </header>
+
+        <div class="container-fluid px-0" id="mainContentArea">
+
+            <!-- New Deck Quick Action Banner -->
+            <div
+                class="dashboard-card bg-primary text-white mb-4 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                <div>
+                    <h4 class="fw-bold mb-1">Ready to build your next deck?</h4>
+                    <p class="mb-0 opacity-75">Start with a premium template or create from scratch.</p>
+                </div>
+                <button class="btn btn-light px-4 py-2 fw-bold" onclick="showSection('content-projects')">
+                    <i class="ph ph-plus-circle me-2"></i> Create New Deck
+                </button>
+            </div>
+            <!-- SECTION: OVERVIEW -->
+            <div id="content-dashboard" class="content-section">
+                <div class="mb-4">
+                    <h3 class="fw-bold mb-1">Welcome back, David</h3>
+                    <p class="text-secondary">Here's a snapshot of your fundraising activity.</p>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="text-secondary small fw-bold text-uppercase mb-1">Total Raised</div>
+                            <h3 class="fw-bold mb-0 text-primary">$12.4M</h3>
+                            <div class="mt-2 text-success small"><i class="ph ph-trend-up"></i> 14% vs last month</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="text-secondary small fw-bold text-uppercase mb-1">Active Decks</div>
+                            <h3 class="fw-bold mb-0">3</h3>
+                            <div class="mt-2 text-secondary small">2 in design, 1 in review</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="text-secondary small fw-bold text-uppercase mb-1">VC Meetings</div>
+                            <h3 class="fw-bold mb-0">18</h3>
+                            <div class="mt-2 text-primary small">4 scheduled this week</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="text-secondary small fw-bold text-uppercase mb-1">Deck Views</div>
+                            <h3 class="fw-bold mb-0">1,240</h3>
+                            <div class="mt-2 text-success small"><i class="ph ph-trend-up"></i> 42% engagement</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="dashboard-card h-100">
+                            <h5 class="fw-bold mb-4">Recent Activity</h5>
+                            <div class="file-item border-0 bg-light-custom mb-3">
+                                <div class="bg-primary text-white p-2 rounded me-3"><i class="ph ph-pencil-line"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 small fw-bold">Sarah updated 'SaaS Seed Deck v2'</h6>
+                                    <small class="text-secondary">Added new financial projections slides</small>
+                                </div>
+                                <small class="text-muted">10m ago</small>
+                            </div>
+                            <div class="file-item border-0 bg-light-custom mb-3">
+                                <div class="bg-success text-white p-2 rounded me-3"><i class="ph ph-check"></i></div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 small fw-bold">Design approved: Market Slide</h6>
+                                    <small class="text-secondary">Approved by David Chen</small>
+                                </div>
+                                <small class="text-muted">2h ago</small>
+                            </div>
+                            <div class="file-item border-0 bg-light-custom">
+                                <div class="bg-warning text-dark p-2 rounded me-3"><i class="ph ph-chat-text"></i></div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 small fw-bold">New comment on 'Go-to-Market'</h6>
+                                    <small class="text-secondary">"Let's simplify the user journey diagram"</small>
+                                </div>
+                                <small class="text-muted">5h ago</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="dashboard-card h-100">
+                            <h5 class="fw-bold mb-4">Upcoming Tasks</h5>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="t1" checked>
+                                <label class="form-check-label small" for="t1">Review Series A wireframes</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="t2">
+                                <label class="form-check-label small" for="t2">Upload cap table CSV</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="t3">
+                                <label class="form-check-label small" for="t3">Call with Lead Designer @ 2pm</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="t4">
+                                <label class="form-check-label small" for="t4">Approve final PDF export</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: PROJECTS -->
+            <div id="content-projects" class="content-section d-none">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-bold mb-0">Project Board</h3>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-primary btn-sm">Filter</button>
+                        <button class="btn btn-primary btn-sm">+ New Deck</button>
+                    </div>
+                </div>
+
+                <div class="dashboard-card p-0 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0 align-middle">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="ps-4 py-3 border-0">Project Name</th>
+                                    <th class="py-3 border-0">Status</th>
+                                    <th class="py-3 border-0">Progress</th>
+                                    <th class="pe-4 py-3 border-0 text-end">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ps-4">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="bg-primary-subtle p-2 rounded">
+                                                <i class="ph-fill ph-presentation text-primary fs-5"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0 fw-bold small">SaaS Seed Deck 2026</h6>
+                                                <small class="text-secondary" style="font-size: 0.7rem;">Updated 2 days
+                                                    ago</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge bg-warning text-dark">In Design</span></td>
+                                    <td>
+                                        <div class="progress" style="height: 6px; width: 100px;">
+                                            <div class="progress-bar" style="width: 65%;"></div>
+                                        </div>
+                                    </td>
+                                    <td class="pe-4 text-end">
+                                        <button class="btn btn-sm btn-light"><i
+                                                class="ph ph-dots-three-vertical"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ps-4">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="bg-success-subtle p-2 rounded">
+                                                <i class="ph-fill ph-presentation text-success fs-5"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0 fw-bold small">Investor Narrative Brief</h6>
+                                                <small class="text-secondary" style="font-size: 0.7rem;">Completed last
+                                                    week</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge bg-success">Completed</span></td>
+                                    <td>
+                                        <div class="progress" style="height: 6px; width: 100px;">
+                                            <div class="progress-bar bg-success" style="width: 100%;"></div>
+                                        </div>
+                                    </td>
+                                    <td class="pe-4 text-end">
+                                        <button class="btn btn-sm btn-light"><i
+                                                class="ph ph-dots-three-vertical"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: MESSAGES -->
+            <div id="content-messages" class="content-section d-none">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="dashboard-card p-0 overflow-hidden">
+                            <div class="p-3 border-bottom fw-bold">Conversations</div>
+                            <div class="p-3 border-bottom bg-light">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="assets/images/sarah.png" class="rounded-circle" width="40">
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Sarah (Design)</h6>
+                                        <small class="text-primary fw-bold">Typing...</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 border-bottom">
+                                <div class="d-flex align-items-center gap-3 opacity-75">
+                                    <img src="assets/images/mark.png" class="rounded-circle" width="40">
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Mark (Strategy)</h6>
+                                        <small class="text-secondary">See you at 2pm!</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="dashboard-card p-0 overflow-hidden d-flex flex-column" style="height: 500px;">
+                            <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+                                <h6 class="mb-0 fw-bold">Sarah (Lead Designer)</h6>
+                                <button class="btn btn-sm btn-light">Call</button>
+                            </div>
+                            <div class="flex-grow-1 p-4 overflow-auto bg-light-custom">
+                                <div class="d-flex gap-3 mb-4">
+                                    <div class="bg-white p-3 rounded shadow-sm small" style="max-width: 80%;">
+                                        Hey David! I've uploaded the new charts for the competition slide. Does the
+                                        layout look cleaner now?
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end mb-4">
+                                    <div class="bg-primary text-white p-3 rounded shadow-sm small"
+                                        style="max-width: 80%;">
+                                        Yes, much better. Let's use the same style for the market size slide as well.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 border-top bg-white">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-0 bg-light"
+                                        placeholder="Write a message...">
+                                    <button class="btn btn-primary px-4"><i
+                                            class="ph ph-paper-plane-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: ANALYTICS -->
+            <div id="content-analytics" class="content-section d-none">
+                <div class="mb-4">
+                    <h3 class="fw-bold mb-1">Fundraising Insights</h3>
+                    <p class="text-secondary">Real-time engagement data for your active pitch decks.</p>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-8">
+                        <div class="dashboard-card">
+                            <h5 class="fw-bold mb-4">Weekly View Performance</h5>
+                            <div class="d-flex align-items-end gap-2" style="height: 200px;">
+                                <div class="bg-primary opacity-25 rounded-top w-100" style="height: 40%;"></div>
+                                <div class="bg-primary opacity-50 rounded-top w-100" style="height: 60%;"></div>
+                                <div class="bg-primary opacity-75 rounded-top w-100" style="height: 30%;"></div>
+                                <div class="bg-primary rounded-top w-100" style="height: 80%;"></div>
+                                <div class="bg-primary opacity-50 rounded-top w-100" style="height: 50%;"></div>
+                                <div class="bg-primary opacity-75 rounded-top w-100" style="height: 90%;"></div>
+                                <div class="bg-primary rounded-top w-100" style="height: 70%;"></div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-3 text-secondary small">
+                                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="dashboard-card h-100">
+                            <h5 class="fw-bold mb-4">Engagement Score</h5>
+                            <div class="text-center py-4">
+                                <div class="display-3 fw-bold text-success">84</div>
+                                <p class="text-secondary">Excellent Performance</p>
+                                <hr>
+                                <div class="small text-start">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Avg. Slide Time</span>
+                                        <span class="fw-bold">42s</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Completion Rate</span>
+                                        <span class="fw-bold">78%</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Return Rate</span>
+                                        <span class="fw-bold">12%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: TEAM -->
+            <div id="content-team" class="content-section d-none">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-bold mb-0">Team Management</h3>
+                    <button class="btn btn-primary btn-sm">+ Invite Founder</button>
+                </div>
+                <div class="dashboard-card p-0 overflow-hidden">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="px-4">Member</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th class="text-end px-4">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="assets/images/david.png" class="rounded-circle" width="32">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold small">David Chen</h6>
+                                            <small class="text-secondary">david@finflow.io</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-primary">Admin</span></td>
+                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                <td class="text-end px-4"><button class="btn btn-sm btn-light"><i
+                                            class="ph ph-dots-three-outline"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width: 32px; height: 32px;">MK</div>
+                                        <div>
+                                            <h6 class="mb-0 fw-bold small">Mark K.</h6>
+                                            <small class="text-secondary">mark@finflow.io</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-light text-dark">Co-Founder</span></td>
+                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                <td class="text-end px-4"><button class="btn btn-sm btn-light"><i
+                                            class="ph ph-dots-three-outline"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SECTION: SETTINGS -->
+            <div id="content-settings" class="content-section d-none">
+                <h3 class="fw-bold mb-4">Account Settings</h3>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="dashboard-card">
+                            <h5 class="fw-bold mb-4">Profile Details</h5>
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">First Name</label>
+                                        <input type="text" class="form-control" value="David">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">Last Name</label>
+                                        <input type="text" class="form-control" value="Chen">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">Company Name</label>
+                                    <input type="text" class="form-control" value="FinFlow Inc.">
+                                </div>
+                                <button class="btn btn-primary mt-3">Update Profile</button>
+                            </form>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <h5 class="fw-bold mb-4">Security</h5>
+                            <button class="btn btn-outline-danger btn-sm">Reset Password</button>
+                            <button class="btn btn-outline-secondary btn-sm ms-2">Enable 2FA</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="dashboard-card">
+                            <h5 class="fw-bold mb-3">Subscription</h5>
+                            <div class="bg-primary-subtle p-3 rounded mb-3">
+                                <h4 class="fw-bold text-primary mb-1">Pro Plan</h4>
+                                <p class="text-secondary small mb-0">$199 / Month</p>
+                            </div>
+                            <ul class="list-unstyled small text-secondary mb-4">
+                                <li class="mb-2"><i class="ph ph-check text-success me-2"></i> Unlimited revisions</li>
+                                <li class="mb-2"><i class="ph ph-check text-success me-2"></i> Priority support</li>
+                                <li><i class="ph ph-check text-success me-2"></i> Advanced analytics</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100">Upgrade Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.getElementById('sidebar');
+            const toggleBtn = document.getElementById('toggleSidebar');
+            const closeBtn = document.getElementById('closeSidebar');
+
+            if (toggleBtn) toggleBtn.addEventListener('click', () => sidebar.classList.add('show'));
+            if (closeBtn) closeBtn.addEventListener('click', () => sidebar.classList.remove('show'));
+
+            const sidebarLinks = document.querySelectorAll('.sidebar-link[data-target]');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            function showSection(targetId) {
+                // Update active state
+                document.querySelectorAll('.sidebar-link').forEach(l => {
+                    const target = l.getAttribute('data-target') || (l.getAttribute('onclick') ? l.getAttribute('onclick').match(/'([^']+)'/)[1] : null);
+                    l.classList.toggle('active', target === targetId);
+                });
+
+                contentSections.forEach(section => {
+                    section.classList.toggle('d-none', section.id !== targetId);
+                });
+
+                // Auto-collapse mobile nav after selection
+                const navCollapse = document.getElementById('dashboardNav');
+                if (navCollapse && navCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navCollapse);
+                    bsCollapse.hide();
+                }
+            }
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showSection(link.getAttribute('data-target'));
+                });
+            });
+
+            // Global expose for buttons
+            window.showSection = showSection;
+
+            const themeToggleBtn = document.getElementById('themeToggleDash');
+            const htmlElement = document.documentElement;
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                htmlElement.setAttribute('data-bs-theme', savedTheme);
+                updateDashThemeIcon(savedTheme);
+            }
+
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    const currentTheme = htmlElement.getAttribute('data-bs-theme') || 'light';
+                    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                    htmlElement.setAttribute('data-bs-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    updateDashThemeIcon(newTheme);
+                });
+            }
+
+            function updateDashThemeIcon(theme) {
+                if (!themeToggleBtn) return;
+                const icon = themeToggleBtn.querySelector('i');
+                if (icon) icon.className = (theme === 'dark' ? 'ph ph-sun fs-5' : 'ph ph-moon fs-5');
+            }
+
+            // RTL Toggle
+            const rtlToggleBtn = document.getElementById('rtlToggleDash');
+            if (rtlToggleBtn) {
+                const savedRtl = localStorage.getItem('rtl') === 'true';
+                if (savedRtl) htmlElement.setAttribute('dir', 'rtl');
+
+                rtlToggleBtn.addEventListener('click', () => {
+                    const isRtl = htmlElement.getAttribute('dir') === 'rtl';
+                    const nextRtl = !isRtl;
+                    htmlElement.setAttribute('dir', nextRtl ? 'rtl' : 'ltr');
+                    localStorage.setItem('rtl', nextRtl);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

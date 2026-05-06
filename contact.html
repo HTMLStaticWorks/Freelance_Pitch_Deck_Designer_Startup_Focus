@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeckDesigner- Contact Us</title>
+    <meta name="description" content="Get in touch to start your investor-ready pitch deck project.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm" style="background: rgba(255, 255, 255, 0.98);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="dashboard.html" class="utility-btn" title="Dashboard">
+                        <i class="ph ph-squares-four fs-5"></i>
+                    </a>
+                    <button class="utility-btn" id="themeToggle" aria-label="Toggle Theme">
+                        <i class="ph ph-moon fs-5"></i>
+                    </button>
+                    <button class="utility-btn" id="rtlToggle" aria-label="RTL Toggle">
+                        <i class="ph ph-arrows-left-right fs-5"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-primary ms-2 px-4">Log In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-header-sm bg-light-custom text-center border-bottom">
+        <div class="container py-4" data-aos="fade-up">
+            <h1 class="display-4 fw-bold mb-3">Let's <span class="text-gradient">Talk</span>.</h1>
+            <p class="lead text-secondary mx-auto" style="max-width: 600px;">Book a discovery call to discuss your
+                narrative, financial model, and design needs.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Left: Form -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="bento-card bg-white p-4 p-md-5">
+                        <h4 class="fw-bold mb-4">Send us a message</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">First Name</label>
+                                    <input type="text" class="form-control" placeholder="John">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Last Name</label>
+                                    <input type="text" class="form-control" placeholder="Doe">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold">Email</label>
+                                    <input type="email" class="form-control" placeholder="john@startup.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold">Company Website</label>
+                                    <input type="url" class="form-control" placeholder="https://">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold">How can we help?</label>
+                                    <textarea class="form-control" rows="4"
+                                        placeholder="Tell us about your current funding stage and goals..."></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button class="btn btn-primary w-100 py-3">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right: Calendly & Info -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h4 class="fw-bold mb-4">Book a Discovery Call</h4>
+
+                    <!-- Premium Discovery Call Card -->
+                    <div class="bento-card p-0 overflow-hidden bg-white mb-4 shadow-sm border-0">
+                        <div class="bg-primary p-4 text-white">
+                            <h5 class="fw-bold mb-2">15-Min Discovery Call</h5>
+                            <p class="small mb-0 opacity-75">Let's discuss your project goals and how we can help you
+                                raise your next round.</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <i class="ph ph-clock text-primary fs-5"></i>
+                                <span class="small fw-bold">15 Minute Session</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <i class="ph ph-video-camera text-primary fs-5"></i>
+                                <span class="small fw-bold">Google Meet / Zoom</span>
+                            </div>
+                            <button class="btn btn-primary w-100 py-3 fw-bold">Select a Time Slot</button>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-3">
+                                <div
+                                    class="bg-primary-subtle p-3 rounded-circle text-primary fs-4 h-100 d-flex align-items-center">
+                                    <i class="ph-fill ph-envelope"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Email Us</h6>
+                                    <a href="mailto:hello@DeckDesignerdesign"
+                                        class="text-secondary text-decoration-none small">hello@DeckDesignerdesign</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-3">
+                                <div
+                                    class="bg-primary-subtle p-3 rounded-circle text-primary fs-4 h-100 d-flex align-items-center">
+                                    <i class="ph-fill ph-map-pin"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Office</h6>
+                                    <p class="text-secondary small mb-0">123 Startup Blvd,<br>San Francisco, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <h6 class="fw-bold mb-3">Follow Our Journey</h6>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="utility-btn text-primary" title="LinkedIn"><i
+                                        class="ph-fill ph-linkedin-logo"></i></a>
+                                <a href="#" class="utility-btn text-primary" title="Twitter"><i
+                                        class="ph-fill ph-twitter-logo"></i></a>
+                                <a href="#" class="utility-btn text-primary" title="Instagram"><i
+                                        class="ph-fill ph-instagram-logo"></i></a>
+                                <a href="#" class="utility-btn text-primary" title="Dribbble"><i
+                                        class="ph-fill ph-dribbble-logo"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="border-top overflow-hidden">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.23232810077!2d-122.5076402434526!3d37.75781498877544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            width="100%" height="450" style="border:0; filter: grayscale(1) contrast(1.2) opacity(0.8);"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 pe-lg-5">
+                    <a href="index.html" class="footer-brand d-block mb-3">
+                        <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+                    </a>
+                    <p class="text-muted mb-4">Premium portfolio and collaboration platform for freelance pitch deck
+                        designers and startup founders.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Platform</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="portfolio.html">Case Studies</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Resources</h5>
+                    <a href="blog.html">Blog</a>
+                    <a href="service-details.html">Services</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted small">Get weekly tips on investor storytelling.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control "
+                            placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 DeckDesigner All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+

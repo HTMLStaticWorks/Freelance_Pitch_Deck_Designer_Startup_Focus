@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeckDesigner- Pricing</title>
+    <meta name="description" content="Transparent pricing for investor-ready pitch decks, SaaS narrative design, and financial visualization.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm" style="background: rgba(255, 255, 255, 0.98);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                                <div class="d-flex align-items-center gap-2">
+                    <a href="dashboard.html" class="utility-btn" title="Dashboard">
+                        <i class="ph ph-squares-four fs-5"></i>
+                    </a>
+                    <button class="utility-btn" id="themeToggle" aria-label="Toggle Theme">
+                        <i class="ph ph-moon fs-5"></i>
+                    </button>
+                    <button class="utility-btn" id="rtlToggle" aria-label="RTL Toggle">
+                        <i class="ph ph-arrows-left-right fs-5"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-primary ms-2 px-4">Log In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-header bg-light-custom text-center">
+        <div class="container" data-aos="fade-up">
+            <h1 class="display-4 fw-bold mb-3">Simple, <span class="text-gradient">transparent</span> pricing.</h1>
+            <p class="lead text-secondary mx-auto" style="max-width: 600px;">No hidden agency fees. High-end design and storytelling tailored for startups at every funding stage.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="section-padding pb-0">
+        <div class="container">
+            <div class="row g-4 justify-content-center align-items-center">
+                <!-- Starter -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-card p-4">
+                        <h4 class="fw-bold">Visual Redesign</h4>
+                        <p class="text-secondary small mb-4">Perfect if you already have a strong narrative but need professional ThemeForest-quality design.</p>
+                        <h2 class="display-5 fw-bold mb-4">$2,500</h2>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Up to 15 slides</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Custom visuals & charts</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> 1 round of revisions</li>
+                            <li class="mb-3 d-flex align-items-center gap-2 text-muted"><i class="ph ph-x-circle fs-5"></i> No narrative changes</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary w-100">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Growth (Popular) -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-card border-primary p-4 position-relative" style="transform: scale(1.05); box-shadow: 0 20px 40px rgba(91,91,214,0.15);">
+                        <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-gradient text-white px-3 py-2" style="background: var(--gradient-brand);">Most Popular</div>
+                        <h4 class="fw-bold mt-2">Investor Ready</h4>
+                        <p class="text-secondary small mb-4">Full narrative restructuring, copywriting, and high-fidelity presentation design.</p>
+                        <h2 class="display-5 fw-bold mb-4">$4,500</h2>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Up to 20 slides</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Full narrative rewrite</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> SaaS metrics visualization</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Financial model integration</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> 3 rounds of revisions</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-gradient w-100">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bento-card p-4">
+                        <h4 class="fw-bold">Enterprise SaaS</h4>
+                        <p class="text-secondary small mb-4">For growth-stage startups needing sales decks, one-pagers, and ongoing design support.</p>
+                        <h2 class="display-5 fw-bold mb-4">Custom</h2>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Master sales decks</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Executive summaries</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Custom Figma component library</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Priority support via Dashboard</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary w-100">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compare Features Table -->
+    <section class="section-padding">
+        <div class="container" data-aos="fade-up">
+            <div class="text-center mb-5">
+                <h3 class="fw-bold">Compare Features</h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-borderless align-middle text-center" style="min-width: 800px;">
+                    <thead class="border-bottom">
+                        <tr>
+                            <th class="text-start w-25 pb-3">Feature</th>
+                            <th class="pb-3 text-secondary">Visual Redesign</th>
+                            <th class="pb-3 text-primary fw-bold">Investor Ready</th>
+                            <th class="pb-3 text-secondary">Enterprise SaaS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-bottom">
+                            <td class="text-start py-3 fw-bold">UI/UX Design</td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td class="text-start py-3 fw-bold">Custom Illustrations</td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td class="text-start py-3 fw-bold">Narrative Copywriting</td>
+                            <td><i class="ph ph-minus text-muted fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td class="text-start py-3 fw-bold">Financial Visualization</td>
+                            <td><i class="ph ph-minus text-muted fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-start py-3 fw-bold">Figma Source Files</td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                            <td><i class="ph-fill ph-check-circle text-success fs-4"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Stats -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="display-5 fw-bold text-primary mb-1">98%</h2>
+                    <p class="text-secondary small text-uppercase fw-bold">Success Rate</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="display-5 fw-bold text-primary mb-1">$500M+</h2>
+                    <p class="text-secondary small text-uppercase fw-bold">Capital Raised</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="display-5 fw-bold text-primary mb-1">48h</h2>
+                    <p class="text-secondary small text-uppercase fw-bold">First Draft</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                    <h2 class="display-5 fw-bold text-primary mb-1">24/7</h2>
+                    <p class="text-secondary small text-uppercase fw-bold">Dedicated Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Frequently Asked <span class="text-gradient">Questions</span>.</h2>
+                <p class="text-secondary">Everything you need to know about our process and pricing.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="faqAccordion" data-aos="fade-up">
+                        <div class="accordion-item bento-card p-0 mb-3 border-0 overflow-hidden shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How long does a typical project take?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-secondary">
+                                    Our standard "Investor Ready" package typically takes 7-10 business days from discovery to final delivery, depending on the complexity of your financials.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item bento-card p-0 mb-3 border-0 overflow-hidden shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do you sign NDAs before we start?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-secondary">
+                                    Absolutely. We understand the sensitivity of startup data. We sign a standard mutual NDA before any financial information is shared.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bento-card p-0 mb-3 border-0 overflow-hidden shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What file formats do I receive?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-secondary">
+                                    You will receive the source Figma files, an editable PowerPoint (.pptx) or Keynote file, and a high-resolution PDF for distribution.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 pe-lg-5">
+                    <a href="index.html" class="footer-brand d-block mb-3">
+                        <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+                    </a>
+                    <p class="text-muted mb-4">A high-impact, metrics-driven portfolio with funding success stories, narrative framework guide, and client dashboard for collaboration.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Platform</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="portfolio.html">Case Studies</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Resources</h5>
+                    <a href="blog.html">Blog</a>
+                    <a href="service-details.html">Services</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted small">Get weekly tips on investor storytelling.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control " placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 DeckDesigner All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

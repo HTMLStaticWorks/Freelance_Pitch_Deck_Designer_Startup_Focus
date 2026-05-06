@@ -1,1 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeckDesigner (Startup Focus) - Investor-Ready Decks</title>
+    <meta name="description"
+        content="Premium DeckDesigner portfolio. We help founders secure funding with investor-ready startup storytelling and beautiful presentation designs.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="DeckDesigner- Investor-Ready Pitch Decks">
+    <meta property="og:description"
+        content="Startup storytelling and VC-ready presentation design for ambitious founders.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                            data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="dashboard.html" class="utility-btn" title="Dashboard">
+                        <i class="ph ph-squares-four fs-5"></i>
+                    </a>
+                    <button class="utility-btn" id="themeToggle" aria-label="Toggle Theme">
+                        <i class="ph ph-moon fs-5"></i>
+                    </button>
+                    <button class="utility-btn" id="rtlToggle" aria-label="RTL Toggle">
+                        <i class="ph ph-arrows-left-right fs-5"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-primary ms-2 px-4">Log In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section-padding pt-5 mt-5 bg-light-custom position-relative overflow-hidden">
+        <div class="container position-relative z-1">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="badge-startup d-inline-block mb-3"><i class="ph-fill ph-fire text-primary me-2"></i>
+                        Helping Founders Raise Millions</div>
+                    <h1 class="display-3 fw-bold mb-4">Investor-Ready <br><span class="text-gradient">Pitch Decks</span>
+                        That Convert.</h1>
+                    <p class="lead text-secondary mb-5 pe-lg-5">We transform complex SaaS metrics and startup visions
+                        into compelling, VC-ready presentations. Stop losing investors to bad design.</p>
+
+                    <div class="d-flex flex-wrap gap-3 mb-5">
+                        <a href="portfolio.html" class="btn btn-gradient btn-lg">View Case Studies</a>
+                    </div>
+
+                    <div class="row g-4 mt-2">
+                        <div class="col-auto">
+                            <h3 class="fw-bold mb-1">$150M+</h3>
+                            <p class="text-secondary small mb-0">Raised by Clients</p>
+                        </div>
+                        <div class="col-auto border-start ps-4">
+                            <h3 class="fw-bold mb-1">45+</h3>
+                            <p class="text-secondary small mb-0">Funded Startups</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                    <div class="position-relative">
+                        <img src="assets/images/deck1.png" alt="Pitch Deck Presentation on Laptop"
+                            class="img-fluid rounded-4 shadow-custom">
+                        <!-- Floating Card -->
+                        <div class="position-absolute bottom-0 start-0 translate-middle-x mb-5 bento-card p-3 shadow-custom d-none d-md-block"
+                            style="width: 250px;">
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <div class="bg-success-subtle p-2 rounded-circle text-success"><i
+                                        class="ph-fill ph-trend-up fs-4"></i></div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Series A Secured</h6>
+                                    <small class="text-secondary">TechFlow Inc.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Logos (Section 2) -->
+    <section class="py-5 border-bottom" style="background-color: var(--bg-white);">
+        <div class="container text-center" data-aos="fade-up">
+            <p class="text-secondary small fw-bold text-uppercase tracking-wider mb-4">Trusted by founders backed by</p>
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-5 opacity-75">
+                <h4 class="fw-bold mb-0" style="color: var(--text-secondary);">Y Combinator</h4>
+                <h4 class="fw-bold mb-0" style="color: var(--text-secondary);">Sequoia</h4>
+                <h4 class="fw-bold mb-0" style="color: var(--text-secondary);">a16z</h4>
+                <h4 class="fw-bold mb-0" style="color: var(--text-secondary);">Lightspeed</h4>
+                <h4 class="fw-bold mb-0" style="color: var(--text-secondary);">Index Ventures</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Section 3) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-primary fw-bold text-uppercase tracking-wider">Our Expertise</span>
+                <h2 class="display-5 fw-bold mt-2">More than just pretty slides.</h2>
+                <p class="text-secondary w-50 mx-auto mt-3">We merge financial visualization with narrative psychology
+                    to build decks that investors actually read.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-card p-0 overflow-hidden h-100 w-100">
+                        <img src="assets/images/sarah.png" alt="Storytelling" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Investor Storytelling</h4>
+                            <p class="text-secondary mb-4">Crafting a compelling narrative arch that hooks VCs from the first slide to the ask.</p>
+                            <a href="service-details.html" class="fw-bold text-decoration-none">Learn More <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-card p-0 overflow-hidden h-100 w-100">
+                        <img src="assets/images/deck3.png" alt="Metrics" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <h4 class="fw-bold">SaaS Metrics Design</h4>
+                            <p class="text-secondary mb-4">Visualizing complex MRR, CAC, and LTV charts into digestible, high-impact graphics.</p>
+                            <a href="service-details.html" class="fw-bold text-decoration-none text-accent">Learn More <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bento-card p-0 overflow-hidden h-100 w-100">
+                        <img src="assets/images/collab.png" alt="Redesign" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Deck Redesign</h4>
+                            <p class="text-secondary mb-4">Taking your existing content and giving it a premium, ThemeForest-quality facelift.</p>
+                            <a href="service-details.html" class="fw-bold text-decoration-none" style="color: var(--secondary)">Learn More <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works (Section 4) -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-primary fw-bold text-uppercase tracking-wider">The Process</span>
+                <h2 class="display-5 fw-bold mt-2">How we get you funded.</h2>
+                <p class="text-secondary w-50 mx-auto mt-3">Three simple steps to transform your raw ideas into a
+                    powerful narrative.</p>
+            </div>
+
+            <div class="row g-4 position-relative">
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 shadow"
+                        style="width: 80px; height: 80px; font-size: 1.5rem; font-weight: bold; position: relative; z-index: 2;">
+                        1</div>
+                    <h5 class="fw-bold">Story Audit</h5>
+                    <p class="text-secondary small">We review your current deck and financials to identify narrative
+                        gaps.</p>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 shadow"
+                        style="width: 80px; height: 80px; font-size: 1.5rem; font-weight: bold; position: relative; z-index: 2;">
+                        2</div>
+                    <h5 class="fw-bold">Visual Strategy</h5>
+                    <p class="text-secondary small">We wireframe the flow and visualize complex SaaS metrics.</p>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 shadow"
+                        style="width: 80px; height: 80px; font-size: 1.5rem; font-weight: bold; position: relative; z-index: 2;">
+                        3</div>
+                    <h5 class="fw-bold">Design Execution</h5>
+                    <p class="text-secondary small">You receive high-fidelity, ThemeForest-quality slides ready for
+                        investors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview (Section 5) -->
+    <section class="section-padding" style="background-color: var(--bg-white);">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5" data-aos="fade-up">
+                <div>
+                    <span class="text-primary fw-bold text-uppercase tracking-wider">Recent Work</span>
+                    <h2 class="display-5 fw-bold mt-2">Decks that close.</h2>
+                </div>
+                <a href="portfolio.html" class="btn btn-outline-primary d-none d-md-inline-block">View All Work</a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-card p-0 overflow-hidden position-relative border-0 shadow-sm h-100">
+                        <img src="assets/images/deck2.png" class="img-fluid w-100" alt="TechFlow Case Study">
+                        <div class="p-4" style="background-color: var(--bg-white);">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h4 class="fw-bold mb-0">TechFlow Series A</h4>
+                                <span class="badge bg-success">$12M Raised</span>
+                            </div>
+                            <p class="text-secondary mb-0">Enterprise Data Integration Platform</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-card p-0 overflow-hidden position-relative border-0 shadow-sm h-100">
+                        <img src="assets/images/team1.png" class="img-fluid w-100" alt="FinStack Case Study">
+                        <div class="p-4" style="background-color: var(--bg-white);">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h4 class="fw-bold mb-0">FinStack Seed</h4>
+                                <span class="badge bg-success">$4M Raised</span>
+                            </div>
+                            <p class="text-secondary mb-0">API First Fintech Infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 d-md-none">
+                <a href="portfolio.html" class="btn btn-outline-primary w-100">View All Work</a>
+            </div>
+        </div>
+    <!-- Founder Dashboard Section (NEW) -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="text-primary fw-bold text-uppercase tracking-wider">Collaboration Portal</span>
+                    <h2 class="display-5 fw-bold mt-2">Real-time collaboration for <span class="text-gradient">high-stakes decks.</span></h2>
+                    <p class="text-secondary mt-3">Our exclusive client dashboard streamlines the entire design process, from raw content to final funding.</p>
+                    
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-6">
+                            <div class="d-flex gap-3">
+                                <i class="ph-fill ph-upload-simple text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="fw-bold">Content Upload</h6>
+                                    <p class="small text-secondary">Securely upload your data and narrative drafts.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex gap-3">
+                                <i class="ph-fill ph-layout text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="fw-bold">Template Review</h6>
+                                    <p class="small text-secondary">Choose from custom-built narrative frameworks.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex gap-3">
+                                <i class="ph-fill ph-git-branch text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="fw-bold">Track Revisions</h6>
+                                    <p class="small text-secondary">Live tracking of slide edits and feedback loops.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex gap-3">
+                                <i class="ph-fill ph-download-simple text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="fw-bold">One-Click Download</h6>
+                                    <p class="small text-secondary">Get your final investor-ready PDF/PPT instantly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="dashboard.html" class="btn btn-primary px-4">Try the Demo Dashboard</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+                    <div class="bento-card p-2 border-0 shadow-lg">
+                        <img src="assets/images/deck2.png" alt="Founder Dashboard Interface" class="img-fluid rounded-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Section 6) -->
+    <section class="section-padding bg-dark-custom text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="display-5 fw-bold">Founders <span class="text-gradient">love</span> our work.</h2>
+                    <p class="text-secondary mt-3 mb-4">Don't just take our word for it. See what YC alumni and Series A
+                        founders have to say about DeckDesigner</p>
+                    <a href="portfolio.html" class="btn btn-outline-light">Read Case Studies</a>
+                </div>
+                <div class="col-lg-6 offset-lg-1" data-aos="fade-left">
+                    <div class="bento-card p-5 rounded-4 position-relative shadow-lg border-0"
+                        style="background-color: var(--bg-white);">
+                        <i
+                            class="ph-fill ph-quotes text-primary opacity-25 position-absolute top-0 start-0 m-4 fs-1"></i>
+                        <p class="fs-5 position-relative z-1 fst-italic mb-4" style="color: var(--text-primary);">
+                            "DeckDesignercompletely transformed our Series A deck. They took our messy financial models and
+                            turned them into a story that investors immediately understood. We closed our round 3 weeks
+                            later."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/investor.png" alt="Founder" class="rounded-circle" width="60">
+                            <div>
+                                <h6 class="fw-bold mb-0">David Chen</h6>
+                                <small class="text-secondary">CEO, FinFlow (YC W23)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Section 7) -->
+    <section class="section-padding text-center" style="background-color: var(--bg-white);">
+        <div class="container" data-aos="zoom-in">
+            <h2 class="display-5 fw-bold mb-4">Ready to raise your next round?</h2>
+            <p class="lead text-secondary mb-5">Join the platform where elite designers and ambitious founders
+                collaborate.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+                <a href="register.html" class="btn btn-outline-primary btn-lg">Create Account</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 pe-lg-5">
+                    <a href="index.html" class="footer-brand d-block mb-3">
+                        <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+                    </a>
+                    <p class="text-muted mb-4">Premium portfolio and collaboration platform for freelance pitch deck
+                        designers and startup founders.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-dribbble-logo"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Platform</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="portfolio.html">Case Studies</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Resources</h5>
+                    <a href="blog.html">Blog</a>
+                    <a href="service-details.html">Services</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted small">Get weekly tips on investor storytelling.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control " placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 DeckDesigner All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+
 

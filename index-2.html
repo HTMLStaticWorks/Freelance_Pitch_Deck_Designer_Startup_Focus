@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeckDesigner (Startup Focus) - SaaS Specialization</title>
+    <meta name="description" content="SaaS pitch deck design for startup founders.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                            data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item active" href="index-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="dashboard.html" class="utility-btn" title="Dashboard">
+                        <i class="ph ph-squares-four fs-5"></i>
+                    </a>
+                    <button class="utility-btn" id="themeToggle" aria-label="Toggle Theme">
+                        <i class="ph ph-moon fs-5"></i>
+                    </button>
+                    <button class="utility-btn" id="rtlToggle" aria-label="RTL Toggle">
+                        <i class="ph ph-arrows-left-right fs-5"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-primary ms-2 px-4">Log In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Viewport Optimized) -->
+    <section class="hero-saas d-flex align-items-center justify-content-center position-relative overflow-hidden"
+        style="min-height: 100vh; background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('assets/images/f46275d64e.jpg'); background-size: cover; background-position: center;">
+
+
+        <div class="container py-5 mt-5 pt-5 position-relative" style="z-index: 1;">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <h1 class="display-2 fw-bold mb-4 text-white">Translating MRR, ARR, and LTV <br>into <span
+                            class="text-gradient">Fundable Narratives.</span></h1>
+                    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 700px;">We specialize in B2B SaaS pitch
+                        decks. We know how to highlight your cohorts, explain your go-to-market, and justify your
+                        valuation.</p>
+
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <a href="pricing.html" class="btn btn-primary btn-lg px-5">View Packages</a>
+                        <a href="portfolio.html" class="btn btn-outline-light btn-lg px-5 d-inline-flex align-items-center justify-content-center">
+                            <i class="ph ph-play-circle me-2"></i> See Examples
+                        </a>
+                    </div>
+
+                    <!-- Glassmorphism Stats Bar -->
+                    <div class="row g-4 mt-5 pt-5 border-top border-white border-opacity-10 justify-content-center">
+                        <div class="col-md-3">
+                            <div class="text-white">
+                                <h3 class="fw-bold mb-0 text-gradient">$150M+</h3>
+                                <p class="small opacity-75">Raised by Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 border-start border-white border-opacity-10">
+                            <div class="text-white">
+                                <h3 class="fw-bold mb-0 text-gradient">120+</h3>
+                                <p class="small opacity-75">SaaS Decks Built</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 border-start border-white border-opacity-10">
+                            <div class="text-white">
+                                <h3 class="fw-bold mb-0 text-gradient">98%</h3>
+                                <p class="small opacity-75">Success Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pitch Framework Section -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-primary fw-bold text-uppercase tracking-wider">The Framework</span>
+                <h2 class="display-5 fw-bold mt-2">How we build a winning SaaS deck.</h2>
+            </div>
+
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="bento-card mb-4 p-4">
+                        <div class="d-flex gap-4">
+                            <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">1</div>
+                            <div>
+                                <h4 class="fw-bold">The Problem & Hook</h4>
+                                <p class="text-secondary mb-0">Defining the pain point clearly, supported by industry
+                                    trends and immediate urgency.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-card mb-4 p-4 border-primary shadow-sm" style="transform: scale(1.02);">
+                        <div class="d-flex gap-4">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">2</div>
+                            <div>
+                                <h4 class="fw-bold">The SaaS Magic</h4>
+                                <p class="text-secondary mb-0">Showcasing the product loop, user stickiness, and why
+                                    your solution is 10x better.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-card p-4">
+                        <div class="d-flex gap-4">
+                            <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">3</div>
+                            <div>
+                                <h4 class="fw-bold">Metrics & Traction</h4>
+                                <p class="text-secondary mb-0">Visualizing ARR growth, negative churn, and customer
+                                    acquisition efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <img src="assets/images/collab.png" alt="Team collaborating on framework"
+                        class="img-fluid rounded-4 shadow-custom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Visualization -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <span class="text-primary fw-bold text-uppercase tracking-wider">Data Storytelling</span>
+                    <h2 class="display-5 fw-bold mt-2">Charts that VCs <span class="text-gradient">understand.</span>
+                    </h2>
+                    <p class="text-secondary mt-3">We transform your raw Excel sheets into high-fidelity visualizations
+                        that highlight your growth trajectory and unit economics.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3 d-flex align-items-center gap-2"><i
+                                class="ph-fill ph-check-circle text-primary fs-5"></i> Cohort Analysis Heatmaps</li>
+                        <li class="mb-3 d-flex align-items-center gap-2"><i
+                                class="ph-fill ph-check-circle text-primary fs-5"></i> CAC/LTV Ratio Charts</li>
+                        <li class="mb-3 d-flex align-items-center gap-2"><i
+                                class="ph-fill ph-check-circle text-primary fs-5"></i> Burn Multiplier Tracking</li>
+                    </ul>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="bento-card p-3">
+                                <img src="assets/images/chart.png" alt="Chart" class="img-fluid rounded mb-3 w-100" style="height: 180px; object-fit: cover;">
+                                <h6 class="fw-bold mb-0">MRR Growth</h6>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bento-card p-3">
+                                <img src="assets/images/deck1.png" alt="Chart" class="img-fluid rounded mb-3 w-100" style="height: 180px; object-fit: cover;">
+                                <h6 class="fw-bold mb-0">Unit Economics</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SaaS Case Studies -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Recent SaaS <span class="text-gradient">Wins.</span></h2>
+                <p class="text-secondary">Explore how we helped SaaS startups raise over $40M in the last 12 months.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-card p-0 overflow-hidden shadow-sm h-100">
+                        <img src="assets/images/deck2.png" alt="Case Study" class="img-fluid w-100"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <div class="badge bg-primary-subtle text-primary mb-2">Fintech SaaS</div>
+                            <h5 class="fw-bold">PayFlow Series A</h5>
+                            <p class="small text-secondary">Helping PayFlow visualize their 3x YoY growth and net
+                                retention metrics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-card p-0 overflow-hidden shadow-sm h-100">
+                        <img src="assets/images/sarah.png" alt="Case Study" class="img-fluid w-100"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <div class="badge bg-accent-subtle text-accent mb-2">AI Infrastructure</div>
+                            <h5 class="fw-bold">NeuralCore Seed</h5>
+                            <p class="small text-secondary">Communicating complex LLM infrastructure to generalist
+                                investors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bento-card p-0 overflow-hidden shadow-sm h-100">
+                        <img src="assets/images/deck3.png" alt="Case Study" class="img-fluid w-100"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <div class="badge bg-secondary-subtle text-secondary mb-2">B2B SaaS</div>
+                            <h5 class="fw-bold">ScaleOps Growth</h5>
+                            <p class="small text-secondary">Designing a master sales deck for enterprise GTM strategy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SaaS Pricing Preview -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h2 class="display-5 fw-bold">Ready to <span class="text-gradient">Scale?</span></h2>
+                    <p class="text-secondary mt-3">Simple pricing for complex narratives. We offer specialized packages
+                        for Seed, Series A, and Growth rounds.</p>
+                    <div class="mt-4">
+                        <a href="pricing.html" class="btn btn-primary px-4 py-2">View All Pricing</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="bento-card p-5 border-primary shadow-lg position-relative overflow-hidden">
+                        <div class="position-absolute top-0 end-0 p-4 opacity-10">
+                            <i class="ph ph-chart-line-up" style="font-size: 10rem;"></i>
+                        </div>
+                        <div class="position-relative z-1">
+                            <h3 class="fw-bold mb-1">Investor Ready</h3>
+                            <p class="text-secondary">Full narrative rewrite + high-end design.</p>
+                            <h2 class="display-4 fw-bold text-primary mt-4">$4,500</h2>
+                            <ul class="list-unstyled mt-4">
+                                <li class="mb-2 d-flex align-items-center gap-2"><i
+                                        class="ph ph-check text-primary fw-bold"></i> 20 Investor Slides</li>
+                                <li class="mb-2 d-flex align-items-center gap-2"><i
+                                        class="ph ph-check text-primary fw-bold"></i> Narrative Storyboard</li>
+                                <li class="mb-2 d-flex align-items-center gap-2"><i
+                                        class="ph ph-check text-primary fw-bold"></i> Financial Visualization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section-padding bg-dark text-white text-center">
+        <div class="container" data-aos="zoom-in">
+            <h2 class="display-4 fw-bold mb-4 text-white">Your SaaS story starts here.</h2>
+            <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;">Join 50+ founders who used DeckDesignerto
+                close their funding rounds. Let's build your deck together.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="contact.html" class="btn btn-primary btn-lg px-5">Book Discovery Call</a>
+                <a href="portfolio.html" class="btn btn-outline-light btn-lg px-5">View Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 pe-lg-5">
+                    <a href="index.html" class="footer-brand d-block mb-3">
+                        <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
+                    </a>
+                    <p class="text-muted mb-4">Premium portfolio and collaboration platform for freelance pitch deck
+                        designers and startup founders.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Platform</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="portfolio.html">Case Studies</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Resources</h5>
+                    <a href="blog.html">Blog</a>
+                    <a href="service-details.html">Services</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted small">Get weekly tips on investor storytelling.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control " placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 DeckDesigner All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
