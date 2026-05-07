@@ -80,17 +80,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close mobile menu on link click
+    // Close mobile menu on link click and handle body scroll lock
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     const navbarCollapse = document.querySelector('.navbar-collapse');
+    
     if (navbarCollapse) {
+        // Toggle scroll lock when menu opens/closes
+        navbarCollapse.addEventListener('show.bs.collapse', () => {
+            document.body.style.overflow = 'hidden';
+        });
+
+        navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+            document.body.style.overflow = '';
+        });
+
+        // Close menu and unlock scroll on link click
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (navbarCollapse.classList.contains('show')) {
                     const bsCollapse = new bootstrap.Collapse(navbarCollapse);
                     bsCollapse.hide();
+                    document.body.style.overflow = '';
                 }
             });
         });
     }
+
+    // Back to Top Logic
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.innerHTML = '<i class="ph ph-arrow-up"></i>';
+    backToTopBtn.setAttribute('aria-label', 'Back to Top');
+    document.body.appendChild(backToTopBtn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Password Visibility Toggle Logic
+    const togglePasswordVisibility = () => {
+        const toggleIcons = document.querySelectorAll('.password-toggle-icon');
+        toggleIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                const input = icon.parentElement.querySelector('input');
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.replace('ph-eye', 'ph-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.replace('ph-eye-slash', 'ph-eye');
+                }
+            });
+        });
+    };
+    togglePasswordVisibility();
 });

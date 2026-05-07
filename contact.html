@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 
 <head>
@@ -28,7 +28,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm" style="background: rgba(255, 255, 255, 0.98);">
+    <nav class="navbar navbar-expand-xl fixed-top py-3 shadow-sm" style="background: rgba(255, 255, 255, 0.98);">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
@@ -38,12 +38,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown d-none d-xl-block">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="index.html">Home 1</a></li>
                             <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link" href="index.html">Home 1</a>
+                    </li>
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link" href="index-2.html">Home 2</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -82,8 +88,8 @@
         <div class="container">
             <div class="row g-5">
                 <!-- Left: Form -->
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="bento-card bg-white p-4 p-md-5">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="bento-card p-4 p-md-5">
                         <h4 class="fw-bold mb-4">Send us a message</h4>
                         <form>
                             <div class="row g-3">
@@ -117,11 +123,11 @@
                 </div>
 
                 <!-- Right: Calendly & Info -->
-                <div class="col-lg-6" data-aos="fade-left">
+                <div class="col-lg-6" data-aos="fade-up">
                     <h4 class="fw-bold mb-4">Book a Discovery Call</h4>
 
                     <!-- Premium Discovery Call Card -->
-                    <div class="bento-card p-0 overflow-hidden bg-white mb-4 shadow-sm border-0">
+                    <div class="bento-card p-0 overflow-hidden mb-4 shadow-sm border-0">
                         <div class="bg-primary p-4 text-white">
                             <h5 class="fw-bold mb-2">15-Min Discovery Call</h5>
                             <p class="small mb-0 opacity-75">Let's discuss your project goals and how we can help you
@@ -198,28 +204,32 @@
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 pe-lg-5">
+                <div class="col-lg-4 col-md-6 pe-lg-5">
                     <a href="index.html" class="footer-brand d-block mb-3">
                         <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
                     </a>
-                    <p class="text-muted mb-4">Premium portfolio and collaboration platform for freelance pitch deck
-                        designers and startup founders.</p>
+                    <p class="text-muted mb-4">A high-impact, metrics-driven portfolio with funding success stories, narrative framework guide, and client dashboard for collaboration.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-dribbble-logo"></i></a>
+                    </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-6">
                     <h5>Platform</h5>
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="pricing.html">Pricing</a>
                     <a href="portfolio.html">Case Studies</a>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-6">
                     <h5>Resources</h5>
                     <a href="blog.html">Blog</a>
                     <a href="service-details.html">Services</a>
                     <a href="dashboard.html">Dashboard</a>
                     <a href="contact.html">Contact</a>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <h5>Newsletter</h5>
                     <p class="text-muted small">Get weekly tips on investor storytelling.</p>
                     <div class="input-group mt-3">

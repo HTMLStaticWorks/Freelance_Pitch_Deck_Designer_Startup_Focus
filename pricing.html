@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm" style="background: rgba(255, 255, 255, 0.98);">
+    <nav class="navbar navbar-expand-xl fixed-top py-3 shadow-sm" style="background: rgba(255, 255, 255, 0.98);">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
@@ -36,12 +36,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown d-none d-xl-block">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="index.html">Home 1</a></li>
                             <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link" href="index.html">Home 1</a>
+                    </li>
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link" href="index-2.html">Home 2</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -77,10 +83,10 @@
     <!-- Pricing Cards -->
     <section class="section-padding pb-0">
         <div class="container">
-            <div class="row g-4 justify-content-center align-items-center">
+            <div class="row g-4 justify-content-center align-items-stretch">
                 <!-- Starter -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bento-card p-4">
+                <div class="col-xl-4 col-lg-12 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-card p-4 d-flex flex-column h-100 w-100">
                         <h4 class="fw-bold">Visual Redesign</h4>
                         <p class="text-secondary small mb-4">Perfect if you already have a strong narrative but need professional ThemeForest-quality design.</p>
                         <h2 class="display-5 fw-bold mb-4">$2,500</h2>
@@ -90,14 +96,14 @@
                             <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> 1 round of revisions</li>
                             <li class="mb-3 d-flex align-items-center gap-2 text-muted"><i class="ph ph-x-circle fs-5"></i> No narrative changes</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline-primary w-100">Get Started</a>
+                        <a href="contact.html" class="btn btn-outline-primary w-100 mt-auto">Get Started</a>
                     </div>
                 </div>
                 
                 <!-- Growth (Popular) -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bento-card border-primary p-4 position-relative" style="transform: scale(1.05); box-shadow: 0 20px 40px rgba(91,91,214,0.15);">
-                        <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-gradient text-white px-3 py-2" style="background: var(--gradient-brand);">Most Popular</div>
+                <div class="col-xl-4 col-lg-12 d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-card border-primary p-4 position-relative d-flex flex-column h-100 w-100 featured-card">
+                        <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-gradient text-white px-3 py-2" style="background: var(--gradient-brand); z-index: 2;">Most Popular</div>
                         <h4 class="fw-bold mt-2">Investor Ready</h4>
                         <p class="text-secondary small mb-4">Full narrative restructuring, copywriting, and high-fidelity presentation design.</p>
                         <h2 class="display-5 fw-bold mb-4">$4,500</h2>
@@ -108,13 +114,13 @@
                             <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Financial model integration</li>
                             <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> 3 rounds of revisions</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-gradient w-100">Get Started</a>
+                        <a href="contact.html" class="btn btn-gradient w-100 mt-auto">Get Started</a>
                     </div>
                 </div>
 
                 <!-- Enterprise -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bento-card p-4">
+                <div class="col-xl-4 col-lg-12 d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bento-card p-4 d-flex flex-column h-100 w-100">
                         <h4 class="fw-bold">Enterprise SaaS</h4>
                         <p class="text-secondary small mb-4">For growth-stage startups needing sales decks, one-pagers, and ongoing design support.</p>
                         <h2 class="display-5 fw-bold mb-4">Custom</h2>
@@ -124,9 +130,10 @@
                             <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Custom Figma component library</li>
                             <li class="mb-3 d-flex align-items-center gap-2"><i class="ph-fill ph-check-circle text-primary fs-5"></i> Priority support via Dashboard</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline-primary w-100">Contact Sales</a>
+                        <a href="contact.html" class="btn btn-outline-primary w-100 mt-auto">Contact Sales</a>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </section>
@@ -221,7 +228,7 @@
                     <div class="accordion accordion-flush" id="faqAccordion" data-aos="fade-up">
                         <div class="accordion-item bento-card p-0 mb-3 border-0 overflow-hidden shadow-sm">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                                     How long does a typical project take?
                                 </button>
                             </h2>
@@ -234,7 +241,7 @@
                         
                         <div class="accordion-item bento-card p-0 mb-3 border-0 overflow-hidden shadow-sm">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                                     Do you sign NDAs before we start?
                                 </button>
                             </h2>
@@ -247,7 +254,7 @@
 
                         <div class="accordion-item bento-card p-0 mb-3 border-0 overflow-hidden shadow-sm">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                                     What file formats do I receive?
                                 </button>
                             </h2>
@@ -267,27 +274,32 @@
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 pe-lg-5">
+                <div class="col-lg-4 col-md-6 pe-lg-5">
                     <a href="index.html" class="footer-brand d-block mb-3">
                         <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
                     </a>
                     <p class="text-muted mb-4">A high-impact, metrics-driven portfolio with funding success stories, narrative framework guide, and client dashboard for collaboration.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-dribbble-logo"></i></a>
+                    </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-6">
                     <h5>Platform</h5>
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="pricing.html">Pricing</a>
                     <a href="portfolio.html">Case Studies</a>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-6">
                     <h5>Resources</h5>
                     <a href="blog.html">Blog</a>
                     <a href="service-details.html">Services</a>
                     <a href="dashboard.html">Dashboard</a>
                     <a href="contact.html">Contact</a>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <h5>Newsletter</h5>
                     <p class="text-muted small">Get weekly tips on investor storytelling.</p>
                     <div class="input-group mt-3">

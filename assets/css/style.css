@@ -73,6 +73,21 @@ h6,
   letter-spacing: -0.02em;
 }
 
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.text-white .display-1,
+.text-white .display-2,
+.text-white .display-3,
+.text-white .display-4,
+.text-white .display-5,
+.text-white .display-6 {
+  color: inherit !important;
+}
+
 a {
   color: var(--primary);
   text-decoration: none;
@@ -235,6 +250,19 @@ a:hover {
 }
 
 /* Bento Grid Cards */
+/* Pricing Page Enhancements */
+.featured-card {
+    transition: transform var(--transition-normal);
+}
+
+@media (min-width: 1200px) {
+    .featured-card {
+        transform: scale(1.05);
+        box-shadow: 0 20px 40px rgba(91, 91, 214, 0.15);
+        z-index: 2;
+    }
+}
+
 .bento-card {
   background: var(--bg-white);
   border: 1px solid var(--border-color);
@@ -509,4 +537,80 @@ a:hover {
 
 [dir="rtl"] .footer-brand {
   flex-direction: row-reverse;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  border: none;
+  box-shadow: 0 4px 15px rgba(99, 83, 219, 0.3);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  bottom: 40px;
+}
+
+.back-to-top:hover {
+  background: var(--primary-hover);
+  transform: translateY(-5px);
+  color: white;
+}
+
+/* Password Toggle */
+.password-toggle-wrapper {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  z-index: 10;
+}
+
+.password-toggle-icon:hover {
+  color: var(--primary);
+}
+
+[dir="rtl"] .password-toggle-icon {
+  right: auto;
+  left: 15px;
+}
+
+/* Services Card Alignment Fix */
+.bento-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-card .p-4 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-card .p-4 a {
+  margin-top: auto;
 }

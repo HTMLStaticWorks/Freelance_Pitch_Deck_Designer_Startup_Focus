@@ -28,7 +28,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top py-3">
+    <nav class="navbar navbar-expand-xl fixed-top py-3">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
@@ -38,13 +38,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown d-none d-xl-block">
                         <a class="nav-link dropdown-toggle active" href="#" role="button"
                             data-bs-toggle="dropdown">Home</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="index.html">Home 1</a></li>
                             <li><a class="dropdown-item active" href="index-2.html">Home 2</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link" href="index.html">Home 1</a>
+                    </li>
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link active" href="index-2.html">Home 2</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -71,21 +77,21 @@
 
     <!-- Hero Section (Viewport Optimized) -->
     <section class="hero-saas d-flex align-items-center justify-content-center position-relative overflow-hidden"
-        style="min-height: 100vh; background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('assets/images/f46275d64e.jpg'); background-size: cover; background-position: center;">
+        style="min-height: 85vh; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/f46275d64e.jpg'); background-size: cover; background-position: center;">
 
 
-        <div class="container py-5 mt-5 pt-5 position-relative" style="z-index: 1;">
+        <div class="container py-4 mt-4 pt-5 position-relative" style="z-index: 1;">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-10" data-aos="fade-up">
                     <h1 class="display-2 fw-bold mb-4 text-white">Translating MRR, ARR, and LTV <br>into <span
-                            class="text-gradient">Fundable Narratives.</span></h1>
+                            class="text-white">Fundable Narratives.</span></h1>
                     <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 700px;">We specialize in B2B SaaS pitch
                         decks. We know how to highlight your cohorts, explain your go-to-market, and justify your
                         valuation.</p>
 
-                    <div class="d-flex justify-content-center align-items-center gap-3">
-                        <a href="pricing.html" class="btn btn-primary btn-lg px-5">View Packages</a>
-                        <a href="portfolio.html" class="btn btn-outline-light btn-lg px-5 d-inline-flex align-items-center justify-content-center">
+                    <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
+                        <a href="pricing.html" class="btn btn-primary px-4 w-100 w-sm-auto" style="min-width: 180px; height: 48px; display: flex; align-items: center; justify-content: center;">View Packages</a>
+                        <a href="portfolio.html" class="btn btn-outline-light px-4 w-100 w-sm-auto d-inline-flex align-items-center justify-content-center" style="min-width: 180px; height: 48px;">
                             <i class="ph ph-play-circle me-2"></i> See Examples
                         </a>
                     </div>
@@ -125,7 +131,7 @@
             </div>
 
             <div class="row g-4 align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
+                <div class="col-lg-6" data-aos="fade-up">
                     <div class="bento-card mb-4 p-4">
                         <div class="d-flex gap-4">
                             <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
@@ -160,9 +166,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                    <img src="assets/images/collab.png" alt="Team collaborating on framework"
-                        class="img-fluid rounded-4 shadow-custom">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/saas_framework.png" alt="SaaS Pitch Deck Framework"
+                        class="img-fluid rounded-4 shadow-custom w-100" style="max-height: 400px; object-fit: cover; object-position: top;">
                 </div>
             </div>
         </div>
@@ -172,7 +178,7 @@
     <section class="section-padding">
         <div class="container">
             <div class="row g-4 align-items-center">
-                <div class="col-lg-5" data-aos="fade-right">
+                <div class="col-lg-5" data-aos="fade-up">
                     <span class="text-primary fw-bold text-uppercase tracking-wider">Data Storytelling</span>
                     <h2 class="display-5 fw-bold mt-2">Charts that VCs <span class="text-gradient">understand.</span>
                     </h2>
@@ -187,17 +193,19 @@
                                 class="ph-fill ph-check-circle text-primary fs-5"></i> Burn Multiplier Tracking</li>
                     </ul>
                 </div>
-                <div class="col-lg-7" data-aos="fade-left">
+                <div class="col-lg-7" data-aos="fade-up">
                     <div class="row g-3">
                         <div class="col-6">
                             <div class="bento-card p-3">
-                                <img src="assets/images/chart.png" alt="Chart" class="img-fluid rounded mb-3 w-100" style="height: 180px; object-fit: cover;">
+                                <img src="assets/images/chart.png" alt="Chart" class="img-fluid rounded mb-3 w-100"
+                                    style="height: 180px; object-fit: cover;">
                                 <h6 class="fw-bold mb-0">MRR Growth</h6>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="bento-card p-3">
-                                <img src="assets/images/deck1.png" alt="Chart" class="img-fluid rounded mb-3 w-100" style="height: 180px; object-fit: cover;">
+                                <img src="assets/images/deck1.png" alt="Chart" class="img-fluid rounded mb-3 w-100"
+                                    style="height: 180px; object-fit: cover;">
                                 <h6 class="fw-bold mb-0">Unit Economics</h6>
                             </div>
                         </div>
@@ -217,7 +225,7 @@
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="bento-card p-0 overflow-hidden shadow-sm h-100">
-                        <img src="assets/images/deck2.png" alt="Case Study" class="img-fluid w-100"
+                        <img src="assets/images/payflow_case.png" alt="PayFlow Fintech SaaS Case Study" class="img-fluid w-100"
                             style="height: 200px; object-fit: cover;">
                         <div class="p-4">
                             <div class="badge bg-primary-subtle text-primary mb-2">Fintech SaaS</div>
@@ -229,7 +237,7 @@
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="bento-card p-0 overflow-hidden shadow-sm h-100">
-                        <img src="assets/images/sarah.png" alt="Case Study" class="img-fluid w-100"
+                        <img src="assets/images/neuralcore_case.png" alt="NeuralCore AI Case Study" class="img-fluid w-100"
                             style="height: 200px; object-fit: cover;">
                         <div class="p-4">
                             <div class="badge bg-accent-subtle text-accent mb-2">AI Infrastructure</div>
@@ -241,12 +249,13 @@
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="bento-card p-0 overflow-hidden shadow-sm h-100">
-                        <img src="assets/images/deck3.png" alt="Case Study" class="img-fluid w-100"
+                        <img src="assets/images/scaleops_case.png" alt="ScaleOps B2B SaaS Case Study" class="img-fluid w-100"
                             style="height: 200px; object-fit: cover;">
                         <div class="p-4">
                             <div class="badge bg-secondary-subtle text-secondary mb-2">B2B SaaS</div>
                             <h5 class="fw-bold">ScaleOps Growth</h5>
-                            <p class="small text-secondary">Designing a master sales deck for enterprise GTM strategy.</p>
+                            <p class="small text-secondary">Designing a master sales deck for enterprise GTM strategy.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -258,7 +267,7 @@
     <section class="section-padding">
         <div class="container">
             <div class="row g-4 align-items-center">
-                <div class="col-lg-5" data-aos="fade-right">
+                <div class="col-lg-5" data-aos="fade-up">
                     <h2 class="display-5 fw-bold">Ready to <span class="text-gradient">Scale?</span></h2>
                     <p class="text-secondary mt-3">Simple pricing for complex narratives. We offer specialized packages
                         for Seed, Series A, and Growth rounds.</p>
@@ -266,7 +275,7 @@
                         <a href="pricing.html" class="btn btn-primary px-4 py-2">View All Pricing</a>
                     </div>
                 </div>
-                <div class="col-lg-7" data-aos="fade-left">
+                <div class="col-lg-7" data-aos="fade-up">
                     <div class="bento-card p-5 border-primary shadow-lg position-relative overflow-hidden">
                         <div class="position-absolute top-0 end-0 p-4 opacity-10">
                             <i class="ph ph-chart-line-up" style="font-size: 10rem;"></i>
@@ -294,7 +303,8 @@
     <section class="section-padding bg-dark text-white text-center">
         <div class="container" data-aos="zoom-in">
             <h2 class="display-4 fw-bold mb-4 text-white">Your SaaS story starts here.</h2>
-            <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;">Join 50+ founders who used DeckDesignerto
+            <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;">Join 50+ founders who used
+                DeckDesignerto
                 close their funding rounds. Let's build your deck together.</p>
             <div class="d-flex justify-content-center gap-3">
                 <a href="contact.html" class="btn btn-primary btn-lg px-5">Book Discovery Call</a>
@@ -307,28 +317,33 @@
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 pe-lg-5">
+                <div class="col-lg-4 col-md-6 pe-lg-5">
                     <a href="index.html" class="footer-brand d-block mb-3">
                         <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
                     </a>
                     <p class="text-muted mb-4">Premium portfolio and collaboration platform for freelance pitch deck
                         designers and startup founders.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-dribbble-logo"></i></a>
+                    </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-6">
                     <h5>Platform</h5>
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="pricing.html">Pricing</a>
                     <a href="portfolio.html">Case Studies</a>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-6">
                     <h5>Resources</h5>
                     <a href="blog.html">Blog</a>
                     <a href="service-details.html">Services</a>
                     <a href="dashboard.html">Dashboard</a>
                     <a href="contact.html">Contact</a>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <h5>Newsletter</h5>
                     <p class="text-muted small">Get weekly tips on investor storytelling.</p>
                     <div class="input-group mt-3">
@@ -350,7 +365,3 @@
 </body>
 
 </html>
-
-
-
-

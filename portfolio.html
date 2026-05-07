@@ -29,7 +29,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm" style="background: rgba(255, 255, 255, 0.98);">
+    <nav class="navbar navbar-expand-xl fixed-top py-3 shadow-sm" style="background: rgba(255, 255, 255, 0.98);">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
@@ -39,12 +39,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown d-none d-xl-block">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="index.html">Home 1</a></li>
                             <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link" href="index.html">Home 1</a>
+                    </li>
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link" href="index-2.html">Home 2</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -87,7 +93,7 @@
             <div class="row align-items-center g-5 mb-5 pb-5 border-bottom" data-aos="fade-up">
                 <div class="col-lg-6">
                     <div class="position-relative">
-                        <img src="assets/images/deck1.png" alt="TechFlow Deck"
+                        <img src="assets/images/portfolio_techflow.png" alt="TechFlow Deck"
                             class="img-fluid rounded-4 shadow-custom">
                         <div
                             class="position-absolute top-0 end-0 m-3 badge bg-success fs-6 rounded-pill px-3 py-2 shadow">
@@ -120,7 +126,7 @@
             <div class="row align-items-center g-5 mb-5 pb-5 border-bottom flex-lg-row-reverse" data-aos="fade-up">
                 <div class="col-lg-6">
                     <div class="position-relative">
-                        <img src="assets/images/deck2.png" alt="FinStack Deck"
+                        <img src="assets/images/portfolio_finstack.png" alt="FinStack Deck"
                             class="img-fluid rounded-4 shadow-custom">
                         <div
                             class="position-absolute top-0 start-0 m-3 badge bg-success fs-6 rounded-pill px-3 py-2 shadow">
@@ -157,11 +163,11 @@
                     text-heavy slides into investor-ready visual narratives.</p>
 
                 <div class="row g-4 justify-content-center align-items-center">
-                    <div class="col-md-5">
-                        <div class="bento-card p-0 overflow-hidden border-danger-subtle shadow-sm">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="bento-card p-0 overflow-hidden border-danger-subtle shadow-sm bg-light-custom">
                             <div class="bg-danger text-white p-2 small fw-bold">BEFORE: Standard Template</div>
-                            <div class="p-4 bg-light text-start" style="min-height: 250px;">
-                                <h6 class="fw-bold text-dark mb-3">Market Opportunity</h6>
+                            <div class="p-4 text-start" style="min-height: 250px;">
+                                <h6 class="fw-bold mb-3">Market Opportunity</h6>
                                 <ul class="small text-secondary ps-3">
                                     <li>The market is growing at 15% CAGR.</li>
                                     <li>Total addressable market is $50 Billion.</li>
@@ -172,36 +178,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center">
+                    <div class="col-lg-2 col-md-12 text-center">
                         <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center shadow"
                             style="width: 50px; height: 50px;">
-                            <i class="ph-bold ph-arrow-right fs-4 d-none d-md-block"></i>
-                            <i class="ph-bold ph-arrow-down fs-4 d-block d-md-none"></i>
+                            <i class="ph-bold ph-arrow-right fs-4 d-none d-lg-block"></i>
+                            <i class="ph-bold ph-arrow-down fs-4 d-block d-lg-none"></i>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="bento-card p-0 overflow-hidden border-primary shadow">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="bento-card p-0 overflow-hidden border-primary shadow bg-dark text-white">
                             <div class="bg-primary text-white p-2 small fw-bold">AFTER: DeckDesignerNarrative
                             </div>
-                            <div class="p-4 bg-white text-start" style="min-height: 250px;">
-                                <h6 class="fw-bold text-primary mb-3">Capturing a $50B Market Shift</h6>
+                            <div class="p-4 text-start" style="min-height: 250px;">
+                                <h6 class="fw-bold text-white mb-3">Capturing a $50B Market Shift</h6>
                                 <div class="row g-2 mt-3">
                                     <div class="col-6">
                                         <div
-                                            class="p-3 bg-light rounded text-center border-start border-4 border-primary">
-                                            <h4 class="fw-bold mb-0">15%</h4>
-                                            <small class="text-secondary" style="font-size: 0.7rem;">CAGR GROWTH</small>
+                                            class="p-3 bg-white bg-opacity-10 rounded text-center border-start border-4 border-primary">
+                                            <h4 class="fw-bold mb-0 text-white">15%</h4>
+                                            <small class="text-white-50" style="font-size: 0.7rem;">CAGR GROWTH</small>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div
-                                            class="p-3 bg-light rounded text-center border-start border-4 border-accent">
-                                            <h4 class="fw-bold mb-0">$50B</h4>
-                                            <small class="text-secondary" style="font-size: 0.7rem;">TOTAL TAM</small>
+                                            class="p-3 bg-white bg-opacity-10 rounded text-center border-start border-4 border-accent">
+                                            <h4 class="fw-bold mb-0 text-white">$50B</h4>
+                                            <small class="text-white-50" style="font-size: 0.7rem;">TOTAL TAM</small>
                                         </div>
                                     </div>
                                 </div>
-                                <p class="small text-secondary mt-3">Visualizing the market shift towards decentralized
+                                <p class="small text-white-50 mt-3">Visualizing the market shift towards decentralized
                                     infrastructure, highlighting the <strong>$12B gap</strong> left by legacy providers.
                                 </p>
                             </div>
@@ -215,7 +221,7 @@
     <section class="section-padding pt-0 pb-5">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-5" data-aos="fade-right">
+                <div class="col-lg-5" data-aos="fade-up">
                     <div class="h-100 d-flex flex-column justify-content-center">
                         <span class="text-primary fw-bold text-uppercase tracking-wider">Our Track Record</span>
                         <h2 class="display-5 fw-bold mt-2">Driving Real Impact for <span
@@ -227,20 +233,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7" data-aos="fade-left">
+                <div class="col-lg-7" data-aos="fade-up">
                     <div class="row g-3">
                         <div class="col-sm-6">
-                            <div class="bento-card bg-primary text-white p-4 h-100">
+                            <div class="bento-card bg-primary text-white p-4 h-100 border-0">
                                 <div class="bg-white bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mb-3"
                                     style="width: 50px; height: 50px;">
                                     <i class="ph ph-trend-up fs-3"></i>
                                 </div>
-                                <h3 class="fw-bold mb-1">$150M+</h3>
+                                <h3 class="fw-bold mb-1 text-white">$150M+</h3>
                                 <p class="small mb-0 opacity-75">Capital raised by our clients in 2025-26.</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="bento-card p-4 h-100 border-0 bg-light">
+                            <div class="bento-card p-4 h-100 border-0 bg-light-custom">
                                 <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
                                     style="width: 50px; height: 50px;">
                                     <i class="ph ph-lightning fs-3"></i>
@@ -251,7 +257,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="bento-card p-4 h-100 border-0 bg-light">
+                            <div class="bento-card p-4 h-100 border-0 bg-light-custom">
                                 <div class="bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mb-3"
                                     style="width: 50px; height: 50px;">
                                     <i class="ph ph-star fs-3"></i>
@@ -266,8 +272,9 @@
                                     style="width: 50px; height: 50px;">
                                     <i class="ph ph-users-three fs-3"></i>
                                 </div>
-                                <h3 class="fw-bold mb-1">85%</h3>
-                                <p class="small mb-0 opacity-75">Client referral rate, showing trust in our narrative.
+                                <h3 class="fw-bold mb-1 text-white">85%</h3>
+                                <p class="small mb-0 opacity-75 text-white">Client referral rate, showing trust in our
+                                    narrative.
                                 </p>
                             </div>
                         </div>
@@ -283,28 +290,33 @@
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 pe-lg-5">
+                <div class="col-lg-4 col-md-6 pe-lg-5">
                     <a href="index.html" class="footer-brand d-block mb-3">
                         <i class="ph-fill ph-presentation-chart text-primary"></i> DeckDesigner
                     </a>
                     <p class="text-muted mb-4">A high-impact, metrics-driven portfolio with funding success stories,
                         narrative framework guide, and client dashboard for collaboration.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" class="social-icon fs-5"><i class="ph-fill ph-dribbble-logo"></i></a>
+                    </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-6">
                     <h5>Platform</h5>
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="pricing.html">Pricing</a>
                     <a href="portfolio.html">Case Studies</a>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-6">
                     <h5>Resources</h5>
                     <a href="blog.html">Blog</a>
                     <a href="service-details.html">Services</a>
                     <a href="dashboard.html">Dashboard</a>
                     <a href="contact.html">Contact</a>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <h5>Newsletter</h5>
                     <p class="text-muted small">Get weekly tips on investor storytelling.</p>
                     <div class="input-group mt-3">
@@ -326,5 +338,3 @@
 </body>
 
 </html>
-
-

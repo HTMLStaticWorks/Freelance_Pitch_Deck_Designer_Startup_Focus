@@ -152,6 +152,29 @@
         .project-row:hover {
             background: var(--bg-light);
         }
+
+        /* Dark Mode Enhancements */
+        [data-bs-theme="dark"] .sidebar-label {
+            opacity: 1 !important;
+            color: var(--text-primary) !important;
+        }
+
+        [data-bs-theme="dark"] .admin-dash-text {
+            color: var(--text-primary) !important;
+        }
+
+        [data-bs-theme="dark"] .opacity-75,
+        [data-bs-theme="dark"] .opacity-50 {
+            opacity: 0.9 !important;
+        }
+
+        [data-bs-theme="dark"] .bg-light-custom {
+            background-color: #1e293b !important;
+        }
+
+        [data-bs-theme="dark"] .bg-white {
+            background-color: var(--bg-white) !important;
+        }
     </style>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 </head>
@@ -168,7 +191,7 @@
         </div>
 
         <nav class="flex-grow-1" id="sidebarNav">
-            <div class="px-4 mb-2 text-secondary small fw-bold text-uppercase opacity-50">Menu</div>
+            <div class="px-4 mb-2 sidebar-label text-secondary small fw-bold text-uppercase opacity-50">Menu</div>
             <a class="sidebar-link active" data-target="content-dashboard">
                 <i class="ph-fill ph-squares-four fs-5"></i> Overview
             </a>
@@ -182,7 +205,8 @@
                 <i class="ph-fill ph-chart-bar fs-5"></i> Analytics
             </a>
 
-            <div class="px-4 mt-4 mb-2 text-secondary small fw-bold text-uppercase opacity-50">Organization</div>
+            <div class="px-4 mt-4 mb-2 sidebar-label text-secondary small fw-bold text-uppercase opacity-50">
+                Organization</div>
             <a class="sidebar-link" data-target="content-team">
                 <i class="ph-fill ph-users fs-5"></i> Team
             </a>
@@ -220,7 +244,8 @@
                     <!-- Bell (Desktop Only) -->
                     <button class="utility-btn position-relative d-none d-lg-flex">
                         <i class="ph ph-bell fs-5"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
                             <span class="visually-hidden">New alerts</span>
                         </span>
                     </button>
@@ -230,8 +255,8 @@
                     <button class="utility-btn" id="rtlToggleDash" aria-label="RTL Toggle">
                         <i class="ph ph-arrows-left-right fs-5"></i>
                     </button>
-                    <button class="navbar-toggler utility-btn border-0 d-lg-none" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#dashboardNav">
+                    <button class="navbar-toggler utility-btn border-0 d-lg-none" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#dashboardNav">
                         <i class="ph ph-list fs-4"></i>
                     </button>
                 </div>
@@ -240,12 +265,14 @@
                 <div class="w-100 d-lg-none order-3"></div>
 
                 <!-- Row 2 Content: Admin Dashboard & Mobile Bell -->
-                <div class="d-flex align-items-center justify-content-between w-100 w-lg-auto mt-2 mt-lg-0 order-4 order-lg-1">
-                    <span class="text-secondary fw-bold">Admin Dashboard</span>
+                <div
+                    class="d-flex align-items-center justify-content-between w-100 w-lg-auto mt-2 mt-lg-0 order-4 order-lg-1">
+                    <span class="admin-dash-text text-secondary fw-bold">Admin Dashboard</span>
                     <!-- Bell (Mobile Only) -->
                     <button class="utility-btn position-relative d-lg-none">
                         <i class="ph ph-bell fs-5"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
                             <span class="visually-hidden">New alerts</span>
                         </span>
                     </button>
@@ -269,7 +296,8 @@
                             </div>
                         </div>
                     </li>
-                    <div class="px-3 mb-2 text-secondary small fw-bold text-uppercase opacity-50">Menu</div>
+                    <div class="px-3 mb-2 sidebar-label text-secondary small fw-bold text-uppercase opacity-50">Menu
+                    </div>
                     <li class="nav-item">
                         <a class="nav-link sidebar-link active" onclick="showSection('content-dashboard')">
                             <i class="ph-fill ph-squares-four fs-5"></i> Overview
@@ -291,7 +319,8 @@
                         </a>
                     </li>
 
-                    <div class="px-3 mt-3 mb-2 text-secondary small fw-bold text-uppercase opacity-50">Organization
+                    <div class="px-3 mt-3 mb-2 sidebar-label text-secondary small fw-bold text-uppercase opacity-50">
+                        Organization
                     </div>
                     <li class="nav-item">
                         <a class="nav-link sidebar-link" onclick="showSection('content-team')">
@@ -614,49 +643,56 @@
                     <button class="btn btn-primary btn-sm">+ Invite Founder</button>
                 </div>
                 <div class="dashboard-card p-0 overflow-hidden">
-                    <table class="table table-hover align-middle mb-0">
-                        <thead class="table-light">
-                            <tr>
-                                <th class="px-4">Member</th>
-                                <th>Role</th>
-                                <th>Status</th>
-                                <th class="text-end px-4">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="px-4">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/images/david.png" class="rounded-circle" width="32">
-                                        <div>
-                                            <h6 class="mb-0 fw-bold small">David Chen</h6>
-                                            <small class="text-secondary">david@finflow.io</small>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="border-bottom">
+                                <tr>
+                                    <th class="px-4 py-3 text-secondary small fw-bold text-uppercase">Member</th>
+                                    <th class="py-3 text-secondary small fw-bold text-uppercase">Role</th>
+                                    <th class="py-3 text-secondary small fw-bold text-uppercase">Status</th>
+                                    <th class="text-end px-4 py-3 text-secondary small fw-bold text-uppercase">Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-4 py-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="assets/images/david.png" class="rounded-circle" width="32">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold small">David Chen</h6>
+                                                <small class="text-secondary">david@finflow.io</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td><span class="badge bg-primary">Admin</span></td>
-                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
-                                <td class="text-end px-4"><button class="btn btn-sm btn-light"><i
-                                            class="ph ph-dots-three-outline"></i></button></td>
-                            </tr>
-                            <tr>
-                                <td class="px-4">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center"
-                                            style="width: 32px; height: 32px;">MK</div>
-                                        <div>
-                                            <h6 class="mb-0 fw-bold small">Mark K.</h6>
-                                            <small class="text-secondary">mark@finflow.io</small>
+                                    </td>
+                                    <td><span class="badge bg-primary">Admin</span></td>
+                                    <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                    <td class="text-end px-4">
+                                        <button class="btn btn-sm btn-light"><i
+                                                class="ph ph-dots-three-outline"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                                style="width: 32px; height: 32px; font-size: 0.7rem;">MK</div>
+                                            <div>
+                                                <h6 class="mb-0 fw-bold small">Mark K.</h6>
+                                                <small class="text-secondary">mark@finflow.io</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td><span class="badge bg-light text-dark">Co-Founder</span></td>
-                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
-                                <td class="text-end px-4"><button class="btn btn-sm btn-light"><i
-                                            class="ph ph-dots-three-outline"></i></button></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                    </td>
+                                    <td><span class="badge bg-light text-dark">Co-Founder</span></td>
+                                    <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                    <td class="text-end px-4">
+                                        <button class="btn btn-sm btn-light"><i
+                                                class="ph ph-dots-three-outline"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -721,8 +757,14 @@
             const toggleBtn = document.getElementById('toggleSidebar');
             const closeBtn = document.getElementById('closeSidebar');
 
-            if (toggleBtn) toggleBtn.addEventListener('click', () => sidebar.classList.add('show'));
-            if (closeBtn) closeBtn.addEventListener('click', () => sidebar.classList.remove('show'));
+            if (toggleBtn) toggleBtn.addEventListener('click', () => {
+                sidebar.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+            if (closeBtn) closeBtn.addEventListener('click', () => {
+                sidebar.classList.remove('show');
+                document.body.style.overflow = '';
+            });
 
             const sidebarLinks = document.querySelectorAll('.sidebar-link[data-target]');
             const contentSections = document.querySelectorAll('.content-section');
@@ -755,6 +797,17 @@
 
             // Global expose for buttons
             window.showSection = showSection;
+
+            // Handle general navbar collapse scroll lock
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse) {
+                navbarCollapse.addEventListener('show.bs.collapse', () => {
+                    document.body.style.overflow = 'hidden';
+                });
+                navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+                    document.body.style.overflow = '';
+                });
+            }
 
             const themeToggleBtn = document.getElementById('themeToggleDash');
             const htmlElement = document.documentElement;
