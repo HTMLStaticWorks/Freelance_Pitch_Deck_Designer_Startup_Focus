@@ -41,9 +41,9 @@
 [data-bs-theme="dark"] {
   --bg-light: #1E293B;
   --bg-white: #0F172A;
-  --text-primary: #F1F5F9;
-  --text-secondary: #E2E8F0;
-  --text-muted: #94A3B8;
+  --text-primary: #FFFFFF;
+  --text-secondary: #FFFFFF;
+  --text-muted: #CBD5E1;
   --border-color: #334155;
 }
 
@@ -202,6 +202,22 @@ a:hover {
   color: var(--primary) !important;
 }
 
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.bg-accent-subtle {
+  background-color: rgba(0, 194, 168, 0.1) !important;
+}
+
+.text-black-custom {
+  color: #000000 !important;
+}
+
+[data-bs-theme="dark"] .text-black-custom {
+  color: var(--text-primary) !important;
+}
+
 /* Sections */
 /* Utility Classes */
 .bg-dark-custom {
@@ -252,15 +268,15 @@ a:hover {
 /* Bento Grid Cards */
 /* Pricing Page Enhancements */
 .featured-card {
-    transition: transform var(--transition-normal);
+  transition: transform var(--transition-normal);
 }
 
 @media (min-width: 1200px) {
-    .featured-card {
-        transform: scale(1.05);
-        box-shadow: 0 20px 40px rgba(91, 91, 214, 0.15);
-        z-index: 2;
-    }
+  .featured-card {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(91, 91, 214, 0.15);
+    z-index: 2;
+  }
 }
 
 .bento-card {
@@ -324,7 +340,8 @@ a:hover {
 }
 
 [data-bs-theme="dark"] .footer-brand {
-  color: #F1F5F9 !important; /* Visible in dark mode, but keeping black in light mode */
+  color: #F1F5F9 !important;
+  /* Visible in dark mode, but keeping black in light mode */
 }
 
 .footer h5 {
@@ -523,7 +540,8 @@ a:hover {
 }
 
 [dir="rtl"] .ph-arrow-right::before {
-  content: "\e8d2"; /* Flip arrow */
+  content: "\e8d2";
+  /* Flip arrow */
 }
 
 [dir="rtl"] .navbar-brand {
@@ -613,4 +631,17 @@ a:hover {
 
 .bento-card .p-4 a {
   margin-top: auto;
+}
+/* Force Recent Wins section text to be white in dark mode */
+[data-bs-theme="dark"] .recent-wins-section h2,
+[data-bs-theme="dark"] .recent-wins-section h2 .text-gradient,
+[data-bs-theme="dark"] .recent-wins-section h5,
+[data-bs-theme="dark"] .recent-wins-section p,
+[data-bs-theme="dark"] .recent-wins-section .badge {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] p {
+  color: #ffffff !important;
 }

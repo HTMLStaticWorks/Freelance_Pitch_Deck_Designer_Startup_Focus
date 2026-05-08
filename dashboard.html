@@ -153,9 +153,17 @@
             background: var(--bg-light);
         }
 
+        .sidebar-label {
+            color: #000000 !important;
+            opacity: 1 !important;
+        }
+
+        .admin-dash-text {
+            color: #000000 !important;
+        }
+
         /* Dark Mode Enhancements */
         [data-bs-theme="dark"] .sidebar-label {
-            opacity: 1 !important;
             color: var(--text-primary) !important;
         }
 
@@ -191,7 +199,7 @@
         </div>
 
         <nav class="flex-grow-1" id="sidebarNav">
-            <div class="px-4 mb-2 sidebar-label text-secondary small fw-bold text-uppercase opacity-50">Menu</div>
+            <div class="px-4 mb-2 sidebar-label small fw-bold text-uppercase">Menu</div>
             <a class="sidebar-link active" data-target="content-dashboard">
                 <i class="ph-fill ph-squares-four fs-5"></i> Overview
             </a>
@@ -205,7 +213,7 @@
                 <i class="ph-fill ph-chart-bar fs-5"></i> Analytics
             </a>
 
-            <div class="px-4 mt-4 mb-2 sidebar-label text-secondary small fw-bold text-uppercase opacity-50">
+            <div class="px-4 mt-4 mb-2 sidebar-label small fw-bold text-uppercase">
                 Organization</div>
             <a class="sidebar-link" data-target="content-team">
                 <i class="ph-fill ph-users fs-5"></i> Team
@@ -267,7 +275,7 @@
                 <!-- Row 2 Content: Admin Dashboard & Mobile Bell -->
                 <div
                     class="d-flex align-items-center justify-content-between w-100 w-lg-auto mt-2 mt-lg-0 order-4 order-lg-1">
-                    <span class="admin-dash-text text-secondary fw-bold">Admin Dashboard</span>
+                    <span class="admin-dash-text fw-bold">Admin Dashboard</span>
                     <!-- Bell (Mobile Only) -->
                     <button class="utility-btn position-relative d-lg-none">
                         <i class="ph ph-bell fs-5"></i>
@@ -296,7 +304,7 @@
                             </div>
                         </div>
                     </li>
-                    <div class="px-3 mb-2 sidebar-label text-secondary small fw-bold text-uppercase opacity-50">Menu
+                    <div class="px-3 mb-2 sidebar-label small fw-bold text-uppercase">Menu
                     </div>
                     <li class="nav-item">
                         <a class="nav-link sidebar-link active" onclick="showSection('content-dashboard')">
@@ -319,7 +327,7 @@
                         </a>
                     </li>
 
-                    <div class="px-3 mt-3 mb-2 sidebar-label text-secondary small fw-bold text-uppercase opacity-50">
+                    <div class="px-3 mt-3 mb-2 sidebar-label small fw-bold text-uppercase">
                         Organization
                     </div>
                     <li class="nav-item">
