@@ -51,13 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 navbar.classList.add('shadow-sm');
                 navbar.style.background = 'rgba(255, 255, 255, 0.98)';
                 if (htmlElement.getAttribute('data-bs-theme') === 'dark') {
-                    navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+                    navbar.style.background = 'rgba(0, 0, 0, 0.98)';
                 }
             } else {
                 navbar.classList.remove('shadow-sm');
                 navbar.style.background = 'rgba(255, 255, 255, 0.95)';
                 if (htmlElement.getAttribute('data-bs-theme') === 'dark') {
-                    navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+                    navbar.style.background = 'rgba(0, 0, 0, 0.95)';
                 }
             }
         });
